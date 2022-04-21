@@ -298,7 +298,7 @@ class Glide extends Tags
     /**
      * The list of allowed file formats based on the configured driver.
      *
-     * @see http://image.intervention.io/getting_started/formats
+     * @see https://image.intervention.io/v2/introduction/formats
      *
      * @return array
      *
@@ -309,9 +309,9 @@ class Glide extends Tags
         $driver = config('statamic.assets.image_manipulation.driver');
 
         if ($driver == 'gd') {
-            return ['jpeg', 'jpg', 'png', 'gif', 'webp'];
+            return ['jpeg', 'jpg', 'png', 'gif', 'webp', 'avif'];
         } elseif ($driver == 'imagick') {
-            return ['jpeg', 'jpg', 'png', 'gif', 'tif', 'bmp', 'psd', 'webp'];
+            return ['jpeg', 'jpg', 'png', 'gif', 'tif', 'bmp', 'psd', 'webp', 'avif'];
         }
 
         throw new \Exception("Unsupported image manipulation driver [$driver]");
